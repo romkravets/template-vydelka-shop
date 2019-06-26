@@ -4,6 +4,12 @@
    --main-color: black;
    --accent-color: red;
    font-family:'Raleway', sans-serif;
+   scroll-behavior: smooth;
+}
+
+body {
+   max-width: 980px;
+   margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6, header,section,footer, p {
@@ -19,6 +25,7 @@ h1, h2, h3, h4, h5, h6, header,section,footer, p {
 .top-header .top-menu {
    display: flex;
    justify-content: space-around;
+   flex: 1;
    padding: 0;
 }
 
@@ -41,5 +48,101 @@ h1, h2, h3, h4, h5, h6, header,section,footer, p {
 @media (min-width: 600px) {
    .top-header nav {
       display: flex;
+      align-items: center;
    }
 }
+
+.top-header .jumbotron {
+   background-image: url(../img/tesla-model-x-black.jpg);
+   min-height: 300px;
+   background-position: center;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.top-header .jumbotron h1 {
+   color: var(--accent-color);
+   font-family: 'Rubik Mono One', sans-serif;
+   font-size: 3rem;
+}
+
+@media (min-width: 600px) {
+   .top-header .jumbotron {
+      min-height: 500px;
+   }
+}
+
+.button {
+   display: inline-block;
+   padding: 0.35em 1.2em;
+   border: 0.1em solid #FFFFFF;
+   margin: 0 0.3em 0.3em 0;
+   border-radius: 0.12em;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-weight: 300;
+   color: #FFFFFF;
+   text-align: center;
+   transition: all 0.2s;
+   background-color: transparent;
+}
+
+.button:hover {
+   color: #000000;
+   background-color: #FFFFFF;
+   cursor: pointer;
+}
+
+.card-button {
+   border-color: black;
+   color: black;
+}
+
+.card-button:hover {
+   background-color: black;
+   color: white;
+}
+@media all and (max-width:30em) {
+   .button {
+       margin: 0.4em auto;
+   }
+}
+
+.product-list .product-card {
+   border: 1px solid var(--main-color);
+   padding: 2px;
+}
+
+.product-list .product-card img {
+   width: 100%;
+   display: block;
+}
+
+.product-list .product-card .button-container {
+   display: flex;
+   justify-content: space-around;
+}
+
+@media (min-width: 640px) {
+   .product-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2px;
+   }
+}
+
+@media (min-width: 960px) {
+   .product-list {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+}
+
+@media (min-width: 980px) {
+   .product-list {
+      grid-template-columns: repeat(4, 1fr)
+   }
+}
+
