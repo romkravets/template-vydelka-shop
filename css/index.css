@@ -1,3 +1,45 @@
-h1 {
-   color: red;
+@import url('https://fonts.googleapis.com/css?family=Raleway|Rubik+Mono+One&display=swap');
+
+:root {
+   --main-color: black;
+   --accent-color: red;
+   font-family:'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, header,section,footer, p {
+   margin: 0;
+   padding: 0;
+}
+.top-header .logo {
+   font-family: 'Rubik Mono One', sans-serif;
+   font-size: 3rem;
+   text-align: center;
+}
+
+.top-header .top-menu {
+   display: flex;
+   justify-content: space-around;
+   padding: 0;
+}
+
+.top-header .top-menu li {
+   list-style: none;
+}
+
+.top-header .top-menu li a {
+   text-transform: uppercase;
+   text-decoration: none;
+   color: var(--main-color);
+   border: 1px solid white;
+   padding: 2px;
+}
+
+.top-header .top-menu li a:hover {
+   border: 1px solid var(--accent-color);
+}
+
+@media (min-width: 600px) {
+   .top-header nav {
+      display: flex;
+   }
 }
